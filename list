@@ -1,0 +1,48 @@
+print("...........list in python.............")
+marks=[50,20,14,34,10]    
+print(marks)
+print()                  #its works same as string but string is immutable and list is mutable
+                         #list stores different types of data as well but array store same type of data
+student=["munawar",24,56.7,"khani"]
+print(student)
+print(student[0])
+print(student[3])
+print(len(student))
+student[1]="Ali"
+print(student)
+print(len(student))
+print(student[-1])     #list contains negative indexing start from(-1) which is last one entry
+print(student[-3])
+print(student[-4])
+print(marks[:5])       #list slicing like string slicing in python
+print(marks[1:])
+print(marks[2:4])
+print(marks[-4:-1])
+print("..............methods in list.................")
+marks.append(55)       #append insert value at the end of the list
+print(marks)
+marks.sort()           #sort the values in ascending order
+print(marks)
+marks.sort(reverse=True)  #it reverse the  mutable list in reverse order
+print(marks)
+marks.reverse()        #its reverse the list from smaller to higher and higher to smaller
+marks.reverse()
+print(marks)
+marks.insert(0,29)     #it inserts the value at specific index
+print(marks)
+marks.insert(6,44)
+print(marks)
+list2=["muhammad","mudasir","muzamil",30,12,40.56,True]
+print(list2)
+list2.append("raees")
+print(list2)
+list2.insert(4,"khani")
+print(list2)
+list2.remove("raees")       #it remove the value which you want to enter
+print(list2)
+list2.pop(2)                #it remove the value present at specific index
+print(list2)
+#list2.clear()              #it clear the whole list
+#print(list2)
+list2.copy()                #it makes the copy of present string
+print(list2)

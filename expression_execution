@@ -1,0 +1,59 @@
+a,b=2,3
+text='@'
+print(a*text*b)
+c="2"
+print((c+text)*b)
+d=5
+print(a+b*d)
+e=5.0
+print(d+e)
+f=1.3
+print(e/f)
+print(e//f)
+print(b/a)
+print(b//a)
+g=-12
+print(g/d)
+print(g//d)
+print(a%b)
+num1=5
+num2=-2
+num3=num1%num2
+print(num3)
+print("if else statement in python")
+light=input("enter your color for light:")
+if(light=="red"):
+    print("Stop")
+elif(light=="green"):
+    print("Go")
+elif(light=="yellow"):
+    print("Look")
+else:
+    print("your light is broken")
+A=int(input("A :"))
+G=input("M/F :")
+if((A==1 or A==2)and G=='M'):
+    print("fee is 100")
+elif(A==3 or A==4 or G=='F'):
+    print("fee is 200")
+elif(A==5 and G=='M'):
+    print("fee is 300")
+else:
+    print("no fee")
+print("............if_else statement using ternary relation.............")
+food=input("food :")
+eat="sweet" if (food=="cake" or food=="jalabi") else "no sweet"
+print(eat)
+print("............clever if ternary operator.............")
+age=int(input("enter your age :"))
+vote=("yes","no") [age<18]              #write multiple line code in one line
+print(vote)
+salary=float(input("enter your salary :"))
+tax=salary*(0.1,0.2) [salary>50000]
+print(tax)
+#code for finding the simple interest rate
+p=float(input("p :"))
+r=float(input("r :"))
+t=float(input("t :"))
+si=(p*r*t)/100
+print(si)

@@ -1,0 +1,37 @@
+print("<________________Dictionary in python__________________>")
+info={
+    "name":"munawar",
+    "marks":[23,44,55,89,67],
+    "topics":("dictionary","set"),
+    "age":19,
+    "is_adult":True,
+    15:78.09
+}
+print(info)
+print(type(info))
+print(info["name"])
+print(info["marks"])
+print(info["topics"])
+info["name"]="khani"
+print(info)
+info["surname"]="mkhan"
+print(info)
+info["gender"]="Male"
+print(info)
+null_dic={}
+null_dic["name"]="mudasir"
+null_dic["age"]=23
+print(null_dic)
+print("............Nested Dictionary..............")
+student={
+    "name":"Ali",
+    "subjects":{                   #dictionary inside dictionary
+        "physics":45,
+        "chemistry":56,
+        "math":78,
+        "english":90
+    }
+}
+print(student)
+print(student["subjects"])
+print(student["subjects"]["english"])
