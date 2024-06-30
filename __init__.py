@@ -1,80 +1,57 @@
-print("<_________________Sets in python_________________>")
-set1={1,2,3,4}
-print(set1)
-set2={1,2,3,2,1}
-print(set2)
-set3={"mudasir",3,4.78,"khani","apple"}
-print(set3)
-set4=("dell",(1,2,3),1,"hp")
-print(set4)
-set5=("dell",(1,2,3),1,"hp",{"raees","aqeel",567})  #set within set
-print(set5)
-print(len(set5))        #it tells about the length of set
-collection={}           #this is an empty dictionary not empth set
-print(type(collection))
-collection1=set()      #this is an empty set
-print(type(collection1))
-collection1.add(23)                #add function add the elements in the set
-collection1.add("vivo y21")
-collection1.add("sports")
-collection1.add("sets")
-print(collection1)
-collection1.remove("vivo y21")     #remove function remove elements from the set
-print(collection1)
-#collection1.remove("munawar")      #it gives an key value error when element is not present in the set
-#print(collection1)
-collection1.discard("munawar")      #discard function doesnot gives an error when element is not present and when we print it then print it out.
-print(collection1)
-set1.clear()                        #clear function clear or empty the whole set
-print(set1)
-collection1.pop()                   #pop function removes the random value from the set
-print(collection1)
-collection1.pop()
-print(collection1)
-unionset1={1,3,4,5,7}
-unionset2={3,4,2,9,0}
-print(unionset1.union(unionset2))   #union set perform same union as we done in math
-print(unionset1.intersection(unionset2))   #intersection same as well
-value1={"munawar",34,22,90.89,"khani"}
-value2={"khani","mudasir","physics",22,56}
-print(value1.union(value2))
-print(value1.intersection(value2))
-#practice question
+print("<................Tuples in python................>")
+tup1=(23,45,33,44,56)      #it can be represened like ()
+print(tup1)
+print(tup1[4])             #index accessing is same
+tup2=()                    #empty tuple
+print(tup2)
+print(type(tup2))
+tup3=(1)                   #it takes single value as integer
+print(tup3)
+print(type(tup3))
+tup4=(1,)
+print(tup4)
+print(type(tup4))
+#slicing in tuples just like same as slicing occurs in list
+print(tup1[:4])
+print(tup1[2:])
+print(tup1[1:3])
+print(tup1[-3:-1])
+print(".............methods in tuples..............")
+print(tup1)
+print(tup1.index(33))           #index method tells us about the value present at which index
+print(tup1.index(44))
+print(tup1.count(56))           #count method tells us about the specific value repeat how many times
 
-#WAP NO.1
-dict1={
-    "table":["a piece of furniture","list of facts& figures"],
-    "cat":"a small animal"
-}
-print(dict1)
-
-#WAP NO.2
-set1={"python","java","c++","python","javascript"}
-set2={"java","python","java","c++","c"}
-print(set1.union(set2))
-print(len(set1.union(set2)))
-
-#WAP NO.3
-dict1={}
-phy_marks=input("enter the marks of physics :")
-dict1.update({"physics":phy_marks})
-print(dict1)
-chm_marks=input("enter the marks of chemistry :")
-dict1.update({"chemistry":chm_marks})
-print(dict1)
-bio_marks=input("enter the marks of biology :")
-dict1.update({"biology":bio_marks})
-print(dict1)
-
-#WAP NO.4
-forset={9,9.0}
-print(forset)
-forset1={9,"9.0"}
-print(forset1)
-forset3={               #this is the set not dictionary and set contain immutable value of tuple
-    ("float",9.0),
-    ("int",9)
-}
-print(forset3)
-
-
+#practice questions
+#question no.1 for takes 3 movie names from user and store in list and print out
+str1=input("enter your first favourite movie name :")
+str2=input("enter your second favourite movie name :")
+str3=input("enter your third favourite movie name :")
+movielist=[str1,str2,str3]
+print(movielist)
+#question no.2 for checking whether palindrome of elements or not
+list1=[1,2,3,2,1]
+list2=list1.copy()
+print(list1)
+list2.reverse()
+print(list2)
+if(list1==list2):
+    print("pallidrome")
+else:
+    print("not a pallidrome")
+list3=[1,2,3]
+list4=list3.copy()
+print(list3)
+list4.reverse()
+print(list4)
+if(list3==list4):
+    print("pallidrome")
+else:
+    print("not a pallidrome")
+#question no.3 for count the number of "A" present in the tuple
+tuple1=('C','D','A','A','B','B','A')
+print(tuple1.count('A'))
+#question no.4 for arrange the values in ascending order
+list1=['C','D','A','A','B','B','A']
+list1.sort()
+print(list1)
