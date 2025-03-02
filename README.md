@@ -1,67 +1,46 @@
-# Python-Programs
 Learn coding to learn much
 
-import tkinter as tk
-from tkinter import messagebox
+# 🐍 Python Practice Tasks  
 
-class TicTacToe:
-    def __init__(self, root):
-        self.root = root
-        self.root.title("Tic Tac Toe")
-        self.current_player = "X"
-        self.board = [[" " for _ in range(3)] for _ in range(3)]
-        self.buttons = [[None for _ in range(3)] for _ in range(3)]
-        self.create_widgets()
+This repository contains a collection of Python programs covering fundamental programming concepts, data structures, control flow, and small projects. These scripts are great for beginners who want to strengthen their Python skills through practical coding exercises.
 
-    def create_widgets(self):
-        for row in range(3):
-            for col in range(3):
-                button = tk.Button(self.root, text=" ", font='Helvetica 20', height=2, width=5,
-                                   command=lambda row=row, col=col: self.on_click(row, col))
-                button.grid(row=row, column=col)
-                self.buttons[row][col] = button
+---
 
-    def on_click(self, row, col):
-        if self.board[row][col] == " ":
-            self.board[row][col] = self.current_player
-            self.buttons[row][col].config(text=self.current_player)
-            if self.check_win(self.current_player):
-                messagebox.showinfo("Tic Tac Toe", f"Player {self.current_player} wins!")
-                self.reset_board()
-            elif self.check_draw():
-                messagebox.showinfo("Tic Tac Toe", "It's a draw!")
-                self.reset_board()
-            else:
-                self.current_player = "O" if self.current_player == "X" else "X"
+## 📂 Project Structure  
 
-    def check_win(self, player):
-        for row in self.board:
-            if all([spot == player for spot in row]):
-                return True
+The repository includes various Python scripts categorized into different topics:
 
-        for col in range(3):
-            if all([self.board[row][col] == player for row in range(3)]):
-                return True
+### ✅ **Basic Python Programs**  
+- **firstprogram.py** – A simple introduction to Python syntax and `print()` function.  
+- **input.py** – Demonstrates how to take user input using the `input()` function.  
+- **print.py** – Explains different ways to format and display output using `print()`.  
 
-        if all([self.board[i][i] == player for i in range(3)]) or all([self.board[i][2 - i] == player for i in range(3)]):
-            return True
+### 🔁 **Loops & Conditionals**  
+- **for_loops.py** – Shows how to use `for` loops to iterate over lists, strings, and ranges.  
+- **nested&if&elif&else.py** – Covers nested conditional statements (`if`, `elif`, and `else`).  
+- **match&case.py** – Demonstrates the `match-case` statement (introduced in Python 3.10).  
 
-        return False
+### 🏗 **Data Structures & Methods**  
+- **list.py** – Explains Python lists, their methods (`append()`, `remove()`, `sort()`), and indexing techniques.  
+- **Tuples.py** – Covers immutable tuples and their basic operations.  
+- **Dictionary.py** – Introduces key-value pairs and dictionary operations.  
+- **methods&strings.py** – Demonstrates string methods like `upper()`, `lower()`, `split()`, and `replace()`.  
+- **strings.py** – Covers string manipulation techniques such as concatenation and iteration.  
+- **stringslicing&len.py** – Explains string slicing and how to use `len()` to determine string length.  
 
-    def check_draw(self):
-        for row in self.board:
-            if " " in row:
-                return False
-        return True
+### 🎲 **Projects & Mini Applications**  
+- **Tic-Tac-Toe.py** – A simple implementation of the Tic-Tac-Toe game in Python.  
+- **calculator&operators.py** – A basic calculator using arithmetic operators.  
+- **time&calculator.py** – Introduces Python's `time` module and its basic functions.  
+- **swappingprintstatement.py** – Demonstrates variable swapping techniques.  
+- **Shape_Printing.py** – Generates patterns and shapes using loops.  
 
-    def reset_board(self):
-        self.board = [[" " for _ in range(3)] for _ in range(3)]
-        self.current_player = "X"
-        for row in range(3):
-            for col in range(3):
-                self.buttons[row][col].config(text=" ")
+### 🔤 **Miscellaneous Topics**  
+- **ascii_values.py** – Displays ASCII values of characters.  
+- **variables&datatypes.py** – Explains Python variables and different data types (`int`, `float`, `str`, `bool`).  
+- **expression_execution.py** – Covers Python expressions and their evaluation.  
+- **recursion.py** – Demonstrates recursion with simple examples.  
+- **escape_sequence.py** – Shows how escape sequences work in Python (`\n`, `\t`, etc.).  
 
-if __name__ == "__main__":
-    root = tk.Tk()
-    game = TicTacToe(root)
-    root.mainloop()
+---
+
